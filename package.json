@@ -1,0 +1,78 @@
+{
+	"name": "react-able",
+	"version": "0.0.1",
+	"description": "React, reuse, releived...",
+	"main": "build/reactable.js",
+	"pre-commit": ["precommit-msg", "lint", "test"],
+	"lint-staged": {
+		"src/**/*.{js,jsx,json,css}": ["prettier --single-quote --write", "git add"]
+	},
+	"scripts": {
+		"precommit": "lint-staged",
+		"prepublish": "npm run build",
+		"lint": "eslint src --ext .js,.jsx --ignore-pattern '*.test.js'",
+		"test:lint": "npm run lint -- --quiet",
+		"start": "webpack --progress --watch --config webpack.config.js src/index.js build/react-able.js",
+		"build": "npm test && webpack --progress --config webpack.config.js src/index.js build/react-able.js",
+		"styleguide": "styleguidist server",
+		"styleguide:build": "styleguidist build && node scripts/moveBuildAssets.js",
+		"test:watch": "npm test -- --watch --bail",
+		"test": "jest --coverage --silent && npm run test:lint"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jaredwilli/react-able"
+	},
+	"keywords": ["components", "component library"],
+	"author": "Jared Williams",
+	"license": "MIT",
+	"homepage": "https://github.com/jaredwilli/react-able#readme",
+	"bugs": {
+		"url": "https://github.com/jaredwilli/react-able/issues"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.0.3",
+		"babel-jest": "^21.2.0",
+		"babel-loader": "^7.1.2",
+		"babel-plugin-transform-decorators-legacy": "^1.3.4",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-preset-stage-2": "^6.24.1",
+		"enzyme": "^3.2.0",
+		"eslint": "^4.12.1",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"eslint-plugin-react": "^7.5.1",
+		"jest": "^21.2.1",
+		"prettier": "^1.8.2",
+		"radium": "^0.19.6",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-styleguidist": "^6.0.33",
+		"react-test-renderer": "^16.2.0",
+		"sinon": "^4.1.2",
+		"svg-sprite-loader": "^3.4.1",
+		"underscore": "^1.8.3",
+		"webpack": "^3.9.1"
+	},
+	"dependencies": {
+		"tinycolor2": "^1.4.1",
+		"underscore": "^1.8.3",
+		"validator": "^9.1.2"
+	},
+	"peerDependencies": {
+		"prop-types": "^15.6.0",
+		"radium": "^0.19.6",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0"
+	},
+	"jest": {
+		"moduleNameMapper": {
+			"^utils": "<rootDir>/src/utils",
+			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+				"<rootDir>/scripts/test/fileMock.js",
+			"\\.(css|less)$": "<rootDir>/scripts/test/styleMock.js"
+		}
+	}
+}
