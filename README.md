@@ -5,7 +5,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/jaredwilli/react-able.svg)](https://greenkeeper.io/)
 [![dependencies Status](https://david-dm.org/jaredwilli/react-able/status.svg)](https://david-dm.org/jaredwilli/react-able)
 
-=========================
+----------- 
 
 JavaScript Component Library
 
