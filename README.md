@@ -4,6 +4,8 @@
 [![CircleCI](https://circleci.com/gh/jaredwilli/react-able.svg?style=shield)](https://circleci.com/gh/jaredwilli/react-able)
 =========================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaredwilli/react-able.svg)](https://greenkeeper.io/)
+
 JavaScript Component Library
 
 ## Installation
