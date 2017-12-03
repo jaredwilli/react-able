@@ -1,7 +1,10 @@
 [react-able](https://jaredwilli.github.io/react-able/)
+
 [![npm](https://img.shields.io/npm/v/react-able.svg?style=flat-square)](https://www.npmjs.com/package/react-able)
 [![license](https://img.shields.io/npm/l/react-able.svg?style=flat-square)](https://github.com/jaredwilli/react-able/blob/master/LICENSE)
-[![CircleCI](https://circleci.com/gh/jaredwilli/react-able.svg?style=shield)](https://circleci.com/gh/jaredwilli/react-able)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jaredwilli/react-able.svg)](https://greenkeeper.io/)
+[![dependencies Status](https://david-dm.org/jaredwilli/react-able/status.svg)](https://david-dm.org/jaredwilli/react-able)
+
 =========================
 
 JavaScript Component Library
