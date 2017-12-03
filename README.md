@@ -36,4 +36,4 @@ Please see [contributing docs](https://github.com/jaredwilli/react-able/blob/mas
 
 ## License
 
-MIT
+[![license](https://img.shields.io/npm/l/react-router4-example.svg?style=flat-square)](https://github.com/jaredwilli/react-router4-example/blob/master/LICENSE)

@@ -2,12 +2,9 @@ module.exports = {
 	env: {
 		browser: true,
 		es6: true,
-		jest: true
+        jest: true,
 	},
-	extends: [
-        'eslint:recommended',
-        'plugin:jsx-a11y/recommended'
-    ],
+    "extends": "airbnb",
 	parser: 'babel-eslint',
 	parserOptions: {
 		sourceType: 'module',
@@ -23,16 +20,12 @@ module.exports = {
 	rules: {
 		strict: 0,
 		camelcase: 'error',
-		indent: [
-			'error',
-			4,
-			{
-				SwitchCase: 1
-			}
-		],
+		indent: ['error', 4, {
+			SwitchCase: 1
+        }],
 		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],
-		semi: 1,
+		semi: 2,
 		'max-len': [
 			'error',
 			{

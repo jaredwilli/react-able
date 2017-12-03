@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CSSModules from 'react-css-modules';
 
-import styles from './close-button.css';
-console.log('STYLES', styles);
+import './close-button.css';
 
 const CloseButton = ({ type = 'button', className = '', style = {}, ...props }) => (
     <button
         type={type}
         style={style}
         aria-label="Close"
-        className={`twizlr close ${className}`}
+        className={`close ${className}`}
         onClick={event => props.onClick(event)}
     >
         {!props.icon && !props.text && <span aria-hidden="true">&times;</span>}
@@ -28,7 +26,4 @@ CloseButton.propTypes = {
     onClick: PropTypes.func.isRequired
 };
 
-export default CSSModules(CloseButton, styles, {
-    allowMultiple: true,
-    handleNotFoundStyleName: 'log'
-});
+export default CloseButton;

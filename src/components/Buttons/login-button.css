@@ -1,0 +1,62 @@
+/* login-button.css */
+
+.login-button {
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+    margin: 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.login-button i {
+    border-right: 1px solid #000;
+    padding: 0 10px;
+    height: 35px;
+    width: 15px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.login-button .btn-text {
+    padding: 0 10px;
+}
+
+
+.facebook {
+    background: #3a589a;
+    border-color: #2e457b;
+}
+.facebook:hover {
+    background: #5378ca;
+}
+
+.google {
+    background: #df4a33;
+    border-color: #b93d2a;
+}
+.google:hover {
+    background: #ef4d34;
+}
+
+.twitter {
+    background: #51aaf1;
+    border-color: #4594d0;
+}
+.twitter:hover {
+    background: #4299de;
+}
+
+.github {
+    background: #444444;
+    border-color: #373737;
+}
+.github:hover {
+    background: #555;
+}

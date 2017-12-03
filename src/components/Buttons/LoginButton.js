@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CSSModules from 'react-css-modules';
 
-import styles from './login-button.css';
-console.log('STYLES', styles);
+import './login-button.css';
 
 const LoginButton = ({
     style = {},
@@ -17,7 +15,7 @@ const LoginButton = ({
         style={style}
         type={type}
         aria-label={`${displayName} Login`}
-        className={`twizlr login-button ${className}`}
+        className={`login-button ${className}`}
         onClick={() => props.onClick(provider)}
     >
         <i className={`fa fa-${className}`} />
@@ -27,14 +25,11 @@ const LoginButton = ({
 
 LoginButton.propTypes = {
     style: PropTypes.object,
-    type: PropTypes.string,
+    type: PropTypes.oneOfType(['button', 'submit', 'reset']).isRequired,
     className: PropTypes.string.isRequired,
     displayName: PropTypes.string.isRequired,
     provider: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
 };
 
-export default CSSModules(LoginButton, styles, {
-    allowMultiple: true,
-    handleNotFoundStyleName: 'log'
-});
+export default LoginButton;
