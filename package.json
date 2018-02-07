@@ -70,7 +70,7 @@
 		"webpack": "^3.9.1"
 	},
 	"dependencies": {
-		"jest-cli": "^21.2.1",
+		"jest-cli": "^22.2.0",
 		"tinycolor2": "^1.4.1",
 		"underscore": "^1.8.3",
 		"validator": "^9.1.2"
